@@ -1,19 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import Axios from 'axios';
+import React from "react";
 
-const CommentList = ({ postId }) => {
-  const [comments, setComments] = useState([]);
-
-  const fetchComments = async () => {
-    const res = await Axios.get(`http://localhost:4001/posts/${postId}/comments`);
-    setComments(res.data);
-  };
-
-  useEffect(() => {
-    fetchComments();
-  }, []);
-
+const CommentList = ({ comments }) => {
   const rederedComments = comments.map((comment) => {
     return <li key={comment.id}>{comment.content}</li>;
   });
