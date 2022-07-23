@@ -17,7 +17,7 @@ const CommentCreate = ({ postId }) => {
           <label>New Comment</label>
           <input className="form-control" value={content} onChange={e => setContent(e.target.value)} />
         </div>
-        <button className="btn btn-primary mt-3">Submit</button>
+        <button className="btn btn-success mt-3">Submit</button>
       </form>
     </div>
   );
