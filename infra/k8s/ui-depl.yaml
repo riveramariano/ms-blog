@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ui-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ui
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      containers:
+        - name: ui
+          image: riveramariano/ui
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-clusterip-srv
+spec:
+  selector:
+    app: ui
+  type: ClusterIP
+  ports:
+    - name: ui
+      protocol: TCP
+      port: 3000
+      targetPort: 3000

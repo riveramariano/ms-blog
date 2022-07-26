@@ -6,8 +6,9 @@ const CommentCreate = ({ postId }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`http://localhost:4001/posts/${postId}/comments`, { content });
-    setContent('');
+    // C:\Windows\System32\drivers\etc > hosts => add in the last line 127.0.0.1 posts.com
+    await Axios.post(`http://posts.com/posts/${postId}/comments`, { content });
+    setContent("");
   };
 
   return (

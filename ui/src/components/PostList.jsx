@@ -7,7 +7,8 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await Axios.get('http://localhost:4002/posts');
+    // C:\Windows\System32\drivers\etc > hosts => add in the last line 127.0.0.1 posts.com
+    const res = await Axios.get("http://posts.com/posts");
     setPosts(res.data);
   };
 

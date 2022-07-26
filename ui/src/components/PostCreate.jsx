@@ -6,8 +6,9 @@ const PostCreate = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post('http://localhost:4000/posts', { title });
-    setTitle('');
+    // C:\Windows\System32\drivers\etc > hosts => add in the last line 127.0.0.1 posts.com
+    await Axios.post("http://posts.com/posts/create", { title });
+    setTitle("");
   };
 
   return (
