@@ -1,6 +1,6 @@
 # Microservices Blog
 
-**_Notes: You need to have docker, docker kubernetes and skaffold installed._**
+**_Notes: You need to have docker, docker kubernetes installed._**
 
 ## Functionality
 
