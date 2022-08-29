@@ -18,6 +18,7 @@ This project is based on the creation of a simple blog, where the user can add p
 
 - Clone the repository `https://github.com/riveramariano/ms-blog.git`
 - Open a console for each microservice and the ui folder:
+  - Run `npm install` for the dependencies
   - Inside each console run `docker build -t your-docker-id/microservice-name .` to create an image
 - Open a console and run `docker push your-docker-id/microservice-image` to push them to Docker Hub
 - Go to each `.yaml` file inside `./infra/k8s/` and change all `riveramariano` references to `your-docker-id`
