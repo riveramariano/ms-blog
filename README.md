@@ -28,5 +28,7 @@ This project is based on the creation of a simple blog, where the user can add p
 - Run `docker push your-docker-id/microservice-image` for each image you created to push them to Docker Hub
 - Go to each `.yaml` file inside `./infra/k8s/` and change all `riveramariano` references to `your-docker-id`
 - Open a console inside the root folder and run `skaffold dev`, this will run all the deployment config files
-- In a File Explorer go to `C:\Windows\System32\drivers\etc`, and add `127.0.0.1 posts.com` on the last line of your `hosts` file
+  - If the first time fail, shut it down a re-run it
+- In a File Explorer go to `C:\Windows\System32\drivers\etc`:
+  - Add `127.0.0.1 posts.com` on the last line of your `hosts` file
 - Open a web browser and go to `posts.com`, the react app should be running
